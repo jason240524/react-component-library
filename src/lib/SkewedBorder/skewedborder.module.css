@@ -1,0 +1,80 @@
+:root {
+  --skewed-bg: #242424;
+}
+
+.base {
+  position: relative;
+  min-width: 2rem;
+  min-height: 4rem;
+  width: 6rem;
+  height: 10rem;
+  background: var(--skewed-bg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(180deg, #00ff99, #9900ff);
+    transform: skew(5deg, 6deg);
+    z-index: -10;
+    transition: all 1s ease-in;
+  }
+
+  /* &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: #111;
+    } */
+
+  &:hover::before {
+    transform: skew(-8deg, -5deg);
+    transition: all 1s ease-in;
+  }
+
+  &::after:hover {
+    transform: skew(-8deg, -5deg);
+    transition: all 1s ease-in;
+  }
+}
+
+.red.base::before {
+  background: linear-gradient(180deg, #ff0000, #ff00ff);
+}
+
+.blue.base::before {
+  background: linear-gradient(180deg, #0000ff, #00ffff);
+}
+
+.green.base::before {
+  background: linear-gradient(180deg, #01f301, #00ffc8);
+}
+
+.yellow.base::before {
+  background: linear-gradient(180deg, #ffff00, #ff0000);
+}
+
+.purple.base::before {
+  background: linear-gradient(180deg, #8000ff, #ff00ff);
+}
+
+.small {
+  width: 2rem;
+  height: 4rem;
+}
+
+.medium {
+  width: 10rem;
+  height: 16rem;
+}
+
+.large {
+  width: 20rem;
+  height: 26rem;
+}

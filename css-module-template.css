@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #9900ff;
+}
+
+.base {
+}
+
+.small {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.large {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.primary {
+  background: #ff0099;
+}
+
+.secondary {
+  background: #00ffaa;
+}

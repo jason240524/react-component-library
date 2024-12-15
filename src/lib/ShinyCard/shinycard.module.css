@@ -1,0 +1,99 @@
+:root {
+  --color-one: #9900ff;
+  --colorTwo: #ff0099;
+}
+
+.base {
+}
+
+.base > div {
+  position: relative;
+  min-width: 4rem;
+  min-height: 6rem;
+  color: #fff;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+  transition: 0.5s;
+}
+
+.base > div:hover {
+  filter: hue-rotate(45deg);
+}
+
+.base > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--color-one), var(--colorTwo));
+}
+
+.base > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--color-one), var(--colorTwo));
+  filter: blur(30px);
+}
+
+.base > div span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.base > div span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.base > div section {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+}
+
+.base > div section h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.base > div section p {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.base > div section a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #ffffffaa;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.medium.base > div {
+  width: 12rem;
+  height: 18rem;
+}

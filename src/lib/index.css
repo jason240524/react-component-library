@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-bg: background-image: linear-gradient(
+      to bottom,
+      #5a003b,
+      #510034,
+      #49012e,
+      #400128,
+      #380122,
+      #32021d,
+      #2c0219,
+      #260114,
+      #20010f,
+      #19000a,
+      #100005,
+      #000000
+    );
+}
